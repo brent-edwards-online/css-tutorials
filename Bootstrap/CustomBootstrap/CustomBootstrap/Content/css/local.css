@@ -14,26 +14,26 @@ ul > li > a {
   background-color: #2A3037;
   height: 160px; }
 
-#main-navigation {
+#main-menu {
   width: 1280px;
   padding: 0 100px;
   margin: 0 auto;
   /*text-align: right;*/
   /* Main Menu */
   /* #main-navigation > ul > li:nth-child(1) > div > ul:nth-child(1) > ul > li:nth-child(1) > a */ }
-  #main-navigation > ul {
+  #main-menu > ul {
     display: flex;
     height: 160px; }
-    #main-navigation > ul > li {
+    #main-menu > ul > li {
       padding: 0 15px;
       height: 100%;
       cursor: pointer; }
-      #main-navigation > ul > li:hover {
+      #main-menu > ul > li:hover {
         background-color: #202429; }
-        #main-navigation > ul > li:hover .mega-menu {
+        #main-menu > ul > li:hover .mega-menu {
           display: flex;
           background-color: aquamarine; }
-      #main-navigation > ul > li > a {
+      #main-menu > ul > li > a {
         line-height: 160px;
         color: #FFFFFF;
         display: block;
@@ -42,7 +42,7 @@ ul > li > a {
         text-decoration: none;
         padding-left: 15px;
         padding-right: 15px; }
-  #main-navigation .mega-menu {
+  #main-menu .mega-menu {
     display: none;
     background-color: #FFFFFF;
     position: absolute;
@@ -50,36 +50,36 @@ ul > li > a {
     -webkit-box-shadow: 0px 10px 70px -15px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 10px 70px -15px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 10px 70px -15px rgba(0, 0, 0, 0.75); }
-    #main-navigation .mega-menu > ul {
+    #main-menu .mega-menu > ul {
       width: 25%;
       border-left: solid 1px #CECECE;
       font-size: 14px;
       line-height: 30px;
       padding: 0; }
-      #main-navigation .mega-menu > ul > li {
+      #main-menu .mega-menu > ul > li {
         padding: 0;
         display: block;
         /* Item List*/ }
-        #main-navigation .mega-menu > ul > li > a:hover {
+        #main-menu .mega-menu > ul > li > a:hover {
           background-color: #ECCF4B; }
-        #main-navigation .mega-menu > ul > li > a {
+        #main-menu .mega-menu > ul > li > a {
           padding: 0 20px;
           display: block;
           font-size: 16px;
           font-weight: 700;
           color: #ECCF4B;
           text-decoration: none; }
-        #main-navigation .mega-menu > ul > li > ul {
+        #main-menu .mega-menu > ul > li > ul {
           padding: 0;
           display: block;
           border-left: none;
           width: 100%; }
-          #main-navigation .mega-menu > ul > li > ul > li {
+          #main-menu .mega-menu > ul > li > ul > li {
             padding: 0;
             display: block; }
-            #main-navigation .mega-menu > ul > li > ul > li > a:hover {
+            #main-menu .mega-menu > ul > li > ul > li > a:hover {
               background-color: #ECCF4B; }
-            #main-navigation .mega-menu > ul > li > ul > li > a {
+            #main-menu .mega-menu > ul > li > ul > li > a {
               padding: 0 20px;
               display: block;
               font-size: 16px;
