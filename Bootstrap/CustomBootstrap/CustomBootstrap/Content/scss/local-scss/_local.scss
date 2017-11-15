@@ -1,4 +1,139 @@
 ﻿* {
     padding: 0;
     margin: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+// colours
+$red: #C01D33;
+$purple: #4E2098;
+$blue: #0091D5;
+$yellow: #ECCF4B;
+$grey: #F4F4F4;
+$black: #2A3037;
+$white: #FFFFFF;
+
+$copy-inactive: #7F8387;
+$copy-hover: #2A3037;
+$menu-hover: #202429;
+
+// size
+$sx-lg: 160px;
+$sx-md: 110px;
+$sx-sm: 80px;
+
+ul {
+    list-style: none;
+}
+
+ul > li > a {
+    text-decoration: none;
+}
+
+.container-fluid {
+    background-color: $black;
+    height: $sx-lg;
+}
+
+#main-navigation {
+    width: 1280px;
+    padding: 0 100px;
+    margin: 0 auto;
+    /*text-align: right;*/
+    /* Main Menu */
+    & > ul {
+        display: flex;
+        height: $sx-lg;
+
+        & > li {
+            padding: 0 15px;
+            height: 100%;
+            cursor: pointer;
+
+
+            &:hover {
+                background-color: $menu-hover;
+
+                .mega-menu {
+                    display: flex;
+                    background-color: aquamarine;
+                }
+            }
+
+            & > a {
+                line-height: $sx-lg;
+                color: $white;
+                display: block;
+                font-size: 14px;
+                font-weight: bold;
+                text-decoration: none;
+                padding-left: 15px;
+                padding-right: 15px
+            }
+        }
+    }
+
+    /* #main-navigation > ul > li:nth-child(1) > div > ul:nth-child(1) > ul > li:nth-child(1) > a */
+        
+    .mega-menu {
+        display: none;
+        background-color: $white;
+        position: absolute;
+        width: 1280px;
+        -webkit-box-shadow: 0px 10px 70px -15px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 10px 70px -15px rgba(0,0,0,0.75);
+        box-shadow: 0px 10px 70px -15px rgba(0,0,0,0.75);
+
+        & > ul {
+            width: 25%;
+            border-left: solid 1px #CECECE;
+            font-size: 14px;
+            line-height: 30px;
+            padding: 0;
+
+            & > li {
+                padding: 0;
+                display: block;
+
+                & > a:hover {
+                    background-color: $yellow;
+                }
+
+                & > a {
+                    padding: 0 20px;
+                    display: block;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $yellow;
+                    text-decoration: none;
+                }
+                /* Item List*/
+                & > ul {
+                    padding: 0;
+                    display: block;
+                    border-left: none;
+                    width: 100%;
+
+                    & > li {
+                        padding: 0;
+                        display: block;
+
+                        & > a:hover {
+                            background-color: $yellow;
+                        }
+
+                        & > a {
+                            padding: 0 20px;
+                            display: block;
+                            font-size: 16px;
+                            color: green;
+                            font-weight: 400;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

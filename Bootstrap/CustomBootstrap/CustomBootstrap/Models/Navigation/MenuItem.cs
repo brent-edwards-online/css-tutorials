@@ -8,11 +8,15 @@ namespace CustomBootstrap.Models.Navigation
     public class MenuItem
     {
 
-        public MenuItem(string text, string uri)
+        public MenuItem(string text, string uri = null)
         {
             Id = Guid.NewGuid();
             Text = text;
-            Link = new Uri(uri);
+            if(!String.IsNullOrEmpty(uri))
+            {
+                Link = new Uri(uri);
+            }
+            
             SubMenuItems = null;
         }
 
