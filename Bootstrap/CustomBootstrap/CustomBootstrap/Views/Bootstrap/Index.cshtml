@@ -1,0 +1,33 @@
+﻿@model CustomBootstrap.Models.NavigationViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Index</h2>
+            <ul>
+                @foreach (var menu in Model.Menu)
+                {
+                    <li>@menu.Text</li>
+                }
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Music Icons</h2>
+            <p><i class="bbs-mic"></i></p>            
+            <p><i class="bbs-vol"></i></p>            
+            <p><i class="bbs-cd"></i></p>            
+            <p><i class="bbs-mute"></i></p>            
+            <p><i class="bbs-note"></i></p>            
+            <p><i class="bbs-phones"></i></p>            
+            <p><i class="bbs-play"></i></p>            
+            <p><i class="bbs-playlist"></i></p>            
+        </div>
+    </div>
+

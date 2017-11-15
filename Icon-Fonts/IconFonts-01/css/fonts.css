@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'brents-brand-selection';
+  src:  url('../fonts/brents-brand-selection.eot?d0widl');
+  src:  url('../fonts/brents-brand-selection.eot?d0widl#iefix') format('embedded-opentype'),
+    url('../fonts/brents-brand-selection.ttf?d0widl') format('truetype'),
+    url('../fonts/brents-brand-selection.woff?d0widl') format('woff'),
+    url('../fonts/brents-brand-selection.svg?d0widl#brents-brand-selection') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="bbs-"], [class*=" bbs-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'brents-brand-selection' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bbs-amazon:before {
+  content: "\e901";
+  color: #f90;
+}
+.bbs-android:before {
+  content: "\e902";
+  color: #a4c639;
+}
+.bbs-spca:before {
+  content: "\e903";
+  color: #2319dc;
+}
+.bbs-beats:before {
+  content: "\e900";
+  color: #de484a;
+}
+.bbs-bootstrap:before {
+  content: "\e904";
+  color: #563d7c;
+}
+.bbs-shutterstock:before {
+  content: "\e905";
+}
+.bbs-fitness-first:before {
+  content: "\e906";
+  color: #e12828;
+}
+.bbs-github:before {
+  content: "\e907";
+}
+.bbs-brand10:before {
+  content: "\e909";
+  color: #00b1ab;
+}
+.bbs-pinterest:before {
+  content: "\e90a";
+  color: #bd081c;
+}
+.bbs-steam:before {
+  content: "\e90d";
+}
+.bbs-wordpress:before {
+  content: "\e90f";
+  color: #21759b;
+}
+.bbs-x-bix:before {
+  content: "\e910";
+  color: #107c10;
+}
+.bbs-xero:before {
+  content: "\e911";
+  color: #13b5ea;
+}
