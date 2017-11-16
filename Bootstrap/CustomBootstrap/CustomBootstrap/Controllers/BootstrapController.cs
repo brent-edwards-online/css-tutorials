@@ -9,11 +9,28 @@ namespace CustomBootstrap.Controllers
 {
     public class BootstrapController : Controller
     {
-        // GET: Bootstrap
+
+        private NavigationViewModel nav = new NavigationViewModel();
+
         public ActionResult Index()
-        {
-            var nav = new NavigationViewModel();
+        {            
             return View(nav);
         }
+
+        public ActionResult ParkInfo()
+        {
+            return View("ParkInfo", nav);
+        }
+
+        public ActionResult Attractions()
+        {
+            return View("Attractions", nav);
+        }
+
+        public ActionResult GroupEvents()
+        {
+            return View("GroupEvents", nav);
+        }
+
     }
 }

@@ -164,12 +164,17 @@
     <Content Include="Content\css\bootstrap-custom.min.css">
       <DependentUpon>bootstrap-custom.css</DependentUpon>
     </Content>
+    <Content Include="Content\css\font-awesome.css" />
     <Content Include="Content\css\local.css" />
     <Content Include="Content\css\local.min.css">
       <DependentUpon>local.css</DependentUpon>
     </Content>
     <Content Include="Content\css\music-fonts.css" />
     <Content Include="Content\fonts\brents-brand-selection.svg" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\images\Dreamworld_logo.svg" />
+    <Content Include="Content\images\Homepage_head-banner_desktop.jpg" />
+    <Content Include="Content\scripts\navigation.js" />
     <Content Include="Content\scss\bootstrap-sass-3.3.7\.gitignore" />
     <Content Include="Content\scss\bootstrap-sass-3.3.7\assets\fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="Content\scss\bootstrap-sass-3.3.7\assets\javascripts\bootstrap-sprockets.js" />
@@ -358,6 +363,11 @@
     <Content Include="Content\fonts\brents-brand-selection.eot" />
     <Content Include="Content\fonts\brents-brand-selection.ttf" />
     <Content Include="Content\fonts\brents-brand-selection.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -381,10 +391,13 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Bootstrap\Index.cshtml" />
+    <Content Include="Views\Shared\_Navigation.cshtml" />
+    <Content Include="Views\Bootstrap\ParkInfo.cshtml" />
+    <Content Include="Views\Bootstrap\GroupEvents.cshtml" />
+    <Content Include="Views\Bootstrap\Attractions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

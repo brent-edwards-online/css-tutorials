@@ -1,0 +1,50 @@
+﻿@model CustomBootstrap.Models.NavigationViewModel
+
+<div class="container-fluid height-lg">
+    <div id="nav-container" class="row height-lg">
+        <nav id="main-menu">
+            <img id="logo" class="width-lg" src="~/Content/images/Dreamworld_logo.svg" />
+            <ul>
+                @foreach (var menu in Model.Menu)
+                {
+                    <li>
+                        <a href="#">@menu.Text</a>
+                        @if (menu.SubMenuItems != null)
+                        {
+                            <div class="mega-menu-container">
+                                <div class="mega-menu">
+                                    @foreach (var col in menu.SubMenuItems)
+                                    {
+                                        @*<h3>@col.Text</h3>*@
+                                    if (col.SubMenuItems != null)
+                                    {
+                                        <ul>
+                                            @foreach (var sub in col.SubMenuItems)
+                                            {
+                                                <li>
+                                                    @Html.ActionLink(sub.Text, "")
+                                                    @if (sub.SubMenuItems != null)
+                                                    {
+                                                        <ul>
+                                                            @foreach (var subsub in sub.SubMenuItems)
+                                                            {
+                                                                <li>@Html.ActionLink(subsub.Text, "")</li>
+                                                            }
+                                                        </ul>
+                                                    }
+                                                </li>
+                                            }
+                                        </ul>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </li>
+                }
+            </ul>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <button id="buy-tickets" class="dark">BUY TICKETS</button>
+        </nav>
+    </div>
+</div>

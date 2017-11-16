@@ -4,50 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container-fluid">
-    <div class="row">
-        <nav id="main-menu">
-            <ul>
-                @foreach (var menu in Model.Menu)
-                {
-                    <li>
-                        <a href="#">@menu.Text</a>
-                        @if (menu.SubMenuItems != null)
-                        {
-                            <div class="mega-menu">
-                                @foreach (var col in menu.SubMenuItems)
-                                {
-                                    @*<h3>@col.Text</h3>*@
-                                    if(col.SubMenuItems != null)
-                                    {
-                                        <ul>
-                                            @foreach (var sub in col.SubMenuItems)
-                                            {
-                                                <li><a>@sub.Text</a>
-                                                @if(sub.SubMenuItems != null)
-                                                {
-                                                    <ul>
-                                                    @foreach (var subsub in sub.SubMenuItems)
-                                                    {
-                                                        <li><a>@subsub.Text</a></li>
-                                                    }
-                                                    </ul>
-                                                }
-                                                </li>
-                                            }                                            
-                                        </ul>
-                                    }
-                                }
-                            </div>
-                        }
-                    </li>
-                }
-            </ul>
-        </nav>
-    </div>
-</div>
+@{
+    Html.RenderPartial("_Navigation", Model);
+}
 
-<div class="container">
+<div id="icons" class="container">
     <div class="row">
         <div class="col-sm-12">
             <h2>Music Icons</h2>

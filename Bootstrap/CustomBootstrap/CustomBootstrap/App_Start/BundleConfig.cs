@@ -22,7 +22,12 @@ namespace CustomBootstrap
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(                      
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/navigation").Include(
+                      "~/Content/scripts/navigation.js"));
+
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                        "~/Content/css/font-awesome.css",
                         "~/Content/css/bootstrap-custom.css",
                         "~/Content/css/local.css",
                       "~/Content/css/site.css"));
