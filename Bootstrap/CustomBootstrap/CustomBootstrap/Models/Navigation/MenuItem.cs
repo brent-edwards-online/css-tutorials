@@ -7,6 +7,10 @@ namespace CustomBootstrap.Models.Navigation
 {
     public class MenuItem
     {
+        public MenuItem(string text, string uri = null, string icon = null): this(text, uri)
+        {
+            Icon = icon;
+        }
 
         public MenuItem(string text, string uri = null)
         {
@@ -27,5 +31,7 @@ namespace CustomBootstrap.Models.Navigation
         public Uri Link { get; set; }
 
         public IEnumerable<MenuItem> SubMenuItems { get; set; }
+
+        public string Icon { get; set; }
     }
 }

@@ -32,5 +32,9 @@ namespace CustomBootstrap.Controllers
             return View("GroupEvents", nav);
         }
 
+        public ActionResult ResponsiveNavigation()
+        {
+            return View("ResponsiveNavigation", nav);
+        }
     }
 }

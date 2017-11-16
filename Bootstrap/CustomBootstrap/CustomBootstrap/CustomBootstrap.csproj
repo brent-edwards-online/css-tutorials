@@ -170,6 +170,7 @@
       <DependentUpon>local.css</DependentUpon>
     </Content>
     <Content Include="Content\css\music-fonts.css" />
+    <Content Include="Content\css\responsive-navigation.css" />
     <Content Include="Content\fonts\brents-brand-selection.svg" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\images\Dreamworld_logo.svg" />
@@ -395,6 +396,7 @@
     <Content Include="Views\Bootstrap\ParkInfo.cshtml" />
     <Content Include="Views\Bootstrap\GroupEvents.cshtml" />
     <Content Include="Views\Bootstrap\Attractions.cshtml" />
+    <Content Include="Views\Bootstrap\ResponsiveNavigation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,123 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+
+body {
+    background: #F0F8EA;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+    width: 95%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+header {
+    background: #E54B4B;
+    color: #EDEDD3;
+    padding: 1em 0;
+    position: relative;
+}
+
+    header::after {
+        content: ' ';
+        clear: both;
+        display: block;
+    }
+
+.logo {
+    float: left;
+    font-size: 1.5em;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+    .logo span {
+        font-weight: 300;
+    }
+
+.site-nav {
+    background: #464655;
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    height: 0;
+    overflow: hidden;
+}
+
+    .site-nav ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .site-nav li {
+        border-bottom: 1px solid #575766;
+    }
+
+        .site-nav li:last-child {
+            border-bottom: none;
+        }
+
+
+.site-nav--icon {
+    margin-right: 20px;    
+    display: inline-block;
+    width: 1.2em;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+    .site-nav a {
+        color: #EBEBD3;
+        text-decoration: none;
+        display: block;
+        padding: 2em 6em;
+        text-transform: uppercase;
+    }
+
+        .site-nav a:hover, .site-nav:focus {
+            background: #E4B363;
+            color: #464655;
+        }
+
+.site-nav--open {
+    height: auto;
+}
+
+.menu-toggle {
+    padding: 1em;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    cursor: pointer;
+}
+
+.open .hamburger {
+    transform: rotate(45deg);
+}
+
+    .open .hamburger:before {
+        opacity: 0;
+    }
+
+    .open .hamburger:after {
+        transform: rotate(-90deg) translateY(-1px) translateX(2px);
+    }
+
+.hamburger, .hamburger::before, .hamburger::after {
+    content: ' ';
+    display: block;
+    background: #EBEBD3;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
+}
+
+    .hamburger::before {
+        transform: translateY(-8px);
+    }
+
+    .hamburger::after {
+        transform: translateY(5px);
+    }

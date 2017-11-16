@@ -1,0 +1,26 @@
+﻿@model CustomBootstrap.Models.NavigationViewModel
+@{
+    ViewBag.Title = "Responsive Navigation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/Content/css/responsivenavigation")
+
+<header>
+    <div class="container">
+        <h1 class="logo">Dream<span>world</span></h1>
+        <nav class="site-nav">
+            <ul>
+                @foreach (var menu in Model.Menu)
+                {
+                    <li>
+                        <a href="#"><i class="@menu.Icon site-nav--icon"></i>@menu.Text</a>                        
+                    </li>
+                }
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+    </div>
+</header>

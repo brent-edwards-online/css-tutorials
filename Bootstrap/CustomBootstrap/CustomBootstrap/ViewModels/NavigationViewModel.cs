@@ -9,7 +9,7 @@ namespace CustomBootstrap.Models
         public NavigationViewModel()
         {
             var menu = new List<MenuItem>();
-            menu.Add(new MenuItem("PARK INFO", "http://www.parkinfo.com.au"));
+            menu.Add(new MenuItem("PARK INFO", "http://www.parkinfo.com.au", "fa fa-info"));
             var columns = new List<MenuItem>();
             columns.Add(new MenuItem("COLUMN 1-1", ""));
             var submenu = new List<MenuItem>();
@@ -57,7 +57,7 @@ namespace CustomBootstrap.Models
             menu[0].SubMenuItems = columns;
 
             // ***** Rides
-            menu.Add(new MenuItem("RIDES", "http://www.rides.com.au"));
+            menu.Add(new MenuItem("RIDES", "http://www.rides.com.au", "fa fa-car"));
             columns = new List<MenuItem>();
             columns.Add(new MenuItem("COLUMN 2-1", ""));
             submenu = new List<MenuItem>();           
@@ -118,7 +118,7 @@ namespace CustomBootstrap.Models
             columns.Add(new MenuItem("COLUMN 2-4", ""));
             menu[1].SubMenuItems = columns;
 
-            menu.Add(new MenuItem("ATTRACTIONS", "http://www.attractions.com.au"));
+            menu.Add(new MenuItem("ATTRACTIONS", "http://www.attractions.com.au", "fa fa-magnet"));
             columns = new List<MenuItem>();
             columns.Add(new MenuItem("COLUMN 3-1", ""));
             columns.Add(new MenuItem("COLUMN 3-2", ""));
@@ -126,7 +126,7 @@ namespace CustomBootstrap.Models
             columns.Add(new MenuItem("COLUMN 3-4", ""));
             menu[2].SubMenuItems = columns;
 
-            menu.Add(new MenuItem("GROUP EVENTS", "http://www.group.events.com.au"));
+            menu.Add(new MenuItem("GROUP EVENTS", "http://www.group.events.com.au", "fa fa-calendar-o"));
             columns = new List<MenuItem>();
             columns.Add(new MenuItem("COLUMN 3-1", ""));
             columns.Add(new MenuItem("COLUMN 3-2", ""));
@@ -134,7 +134,7 @@ namespace CustomBootstrap.Models
             columns.Add(new MenuItem("COLUMN 3-4", ""));
             menu[2].SubMenuItems = columns;
 
-            menu.Add(new MenuItem("FOOD & SHOPPING", "http://www.food.shopping.com.au"));
+            menu.Add(new MenuItem("FOOD & SHOPPING", "http://www.food.shopping.com.au", "fa fa-cutlery"));
             columns = new List<MenuItem>();
             columns.Add(new MenuItem("COLUMN 4-1", ""));
             columns.Add(new MenuItem("COLUMN 4-2", ""));
@@ -142,7 +142,7 @@ namespace CustomBootstrap.Models
             columns.Add(new MenuItem("COLUMN 4-4", ""));
             menu[3].SubMenuItems = columns;
 
-            menu.Add(new MenuItem("SCHOOLS", "http://www.schools.com.au"));
+            menu.Add(new MenuItem("SCHOOLS", "http://www.schools.com.au", "fa fa-graduation-cap"));
             columns = new List<MenuItem>();
             columns.Add(new MenuItem("COLUMN 1", ""));
             columns.Add(new MenuItem("COLUMN 2", ""));

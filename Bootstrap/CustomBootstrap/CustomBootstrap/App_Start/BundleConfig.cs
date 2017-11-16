@@ -26,12 +26,19 @@ namespace CustomBootstrap
                       "~/Content/scripts/navigation.js"));
 
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/Content/css").Include(                        
                         "~/Content/css/font-awesome.css",
                         "~/Content/css/bootstrap-custom.css",
                         "~/Content/css/local.css",
                       "~/Content/css/site.css"));
 
+            bundles.Add(new StyleBundle("~/Content/css/navigation").Include(
+                        "~/Content/css/navigation.css"));
+
+            bundles.Add(new StyleBundle("~/Content/css/responsivenavigation").Include(
+                        "~/Content/css/responsive-navigation.css"));
+
+            
             bundles.Add(new StyleBundle("~/Content/fonts").Include(                        
                       "~/Content/css/music-fonts.css"));
         }

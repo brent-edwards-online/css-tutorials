@@ -16,7 +16,7 @@ namespace CustomBootstrap
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Bootstrap", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Bootstrap", action = "ResponsiveNavigation", id = UrlParameter.Optional }
             );
         }
     }

@@ -9,11 +9,12 @@
         else {
             isAtTopOfPage = true;
         }
-    };
+    });
 
 
     $('#main-menu').hover(function (event) {
         console.log('Hover');
+
 
     }, function (event) {
         console.log('Finish Hover');
@@ -26,4 +27,24 @@
     }, function (event) {
         console.log('Finish Hover');
     });
+
+
+
+    // **** Responsive Nav ****
+
+
+    $('.menu-toggle').click(function (event) {
+        $('.site-nav').toggleClass('site-nav--open', 500);
+
+        $('.menu-toggle').toggleClass('open');
+    });
+
+
+
+
+
+
+
+
+
 });
