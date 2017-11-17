@@ -1,0 +1,25 @@
+<template>
+  <style>
+    p {
+      color: purple;
+    }
+  </style>
+  <p>My Web Template Component</p>
+</template>
+
+<script>
+  const $owner = (document._currentScript || document.currentScript).ownerDocument;
+  const $template = $owner.querySelector("template");
+  class MyComponent extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      const $content = document.importNode($template.content, true);
+      this.appendChild($content);
+    }    
+  }
+
+  window.customElements.define("my-component", MyComponent);
+</script>

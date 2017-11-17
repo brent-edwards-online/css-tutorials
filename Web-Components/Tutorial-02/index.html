@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>HTMl Templates</title>    
+    <script src="./node_modules/document-register-element/build/document-register-element.js"></script>   
+  </head>
+  <body>    
+    <template id="list-item">
+      <li>
+        <h1>A movie title</h1>
+        <p>A movie plot</p>
+      </li>
+    </template>
+
+    <ul id="movie-list"></ul>
+
+    <script>
+      const items =[
+       {
+         "title" : "Movie title 1",
+         "plot" : "plot 1"
+       },
+       {
+         "title" : "Movie title 2",
+         "plot" : "plot 2"
+       } ,
+       {
+         "title" : "Movie title 3",
+         "plot" : "plot 3"
+       }  
+      ];
+      const $template = document.getElementById('list-item');
+      const $list = document.getElementById('movie-list');
+
+      items.forEach((movie) => {
+         const $clone = document.importNode($template.content, true);
+         $clone.querySelector("h1").innerText = movie.title;
+         $clone.querySelector("p").innerText = movie.plot;
+         $list.appendChild($clone);
+      });
+    </script>
+  </body>
+</html>

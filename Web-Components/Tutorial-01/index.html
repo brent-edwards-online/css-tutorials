@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>My first Web Component</title>
+    
+    <script src="./node_modules/document-register-element/build/document-register-element.js"></script>
+
+    <!--
+    <script src="//cdnjs.cloudflare.com/ajax/libs/document-register-element/1.5.0/document-register-element.js">/* W3C Custom Elements */</script> 
+    -->
+
+    <script>
+      class MyCustomElement extends HTMLElement {
+        constructor(){
+          super();
+
+          console.log('My custom element constructed');
+        }
+
+        connectedCallback(){
+          console.log('connected called');
+        }
+
+        static get observedAttributes() {
+          return ["demo"];
+        }
+
+        attributeChangedCallback(name, oldValue, newValue){
+          console.log('arribute changed called', name, oldValue, newValue);
+        }
+
+        disconnectedCallback(){
+          console.log('disconnected called');
+        }
+      }
+
+      class DivisionElement extends HTMLElement {
+        constructor(){
+          super();
+
+          console.log('DivisionElement constructed');
+        }
+
+        divideByTen(value){
+          console.log(parseInt(value) / 10);
+        }
+      }
+
+      class MultiplyElement extends DivisionElement {
+        constructor() {
+          super();
+          console.log('MultiplyElement constructed');
+        }
+
+        multiplyByTen(value){
+          console.log(parseInt(value) * 10);
+        }
+      }
+
+      class CustomAnchor extends HTMLAnchorElement {
+        connectedCallback() {
+          this.addEventListener("click", e => {
+            e.preventDefault();
+            const result = confirm("Are you sure?");
+            if (result) {
+              window.location.href = e.target.href;
+            }
+          });
+        }
+      }
+
+      window.customElements.define("my-custom-element", MyCustomElement);
+      window.customElements.define("do-division", DivisionElement);
+      window.customElements.define("do-multiply", MultiplyElement);      
+      window.customElements.define("custom-anchor", CustomAnchor, { extends: "a"});      
+</script>
+
+  <style>
+    p {
+      color: red;
+    }
+</style>
+
+  </head>
+  <body>    
+    <h1>My extended element</h1>
+    <a is="custom-anchor" href="http://www.google.com">Go to Google</a>    
+
+    <h1>This is not purple</h1>
+    <p>Paragraph in the outer application</p>
+    <div id="simple-div"></div>
+    <p>Paragraph in the outer application</p>
+
+    <script>
+        var $div = document.getElementById('simple-div');
+        $div.attachShadow({mode: "open"});
+        $div.shadowRoot.innerHTML = `
+        <style>
+          p {
+            color: blue;
+          }
+          h1{
+            color: purple;
+          }
+          </style>
+          <p>Paragraph within the shadow dom</p>
+          <h1>This is purple</h1>
+          `
+      </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>HTMl Imports</title>    
+    <script src="./node_modules/document-register-element/build/document-register-element.js"></script>   
+    <link rel="import" href="notice.html" id="notice" />
+  </head>
+  <body>    
+    <script>
+      const $link = document.getElementById('notice');
+      const $content = $link.import.querySelector(".notice-frame");
+      document.body.appendChild($content);
+</script>
+
+  </body>
+</html>
